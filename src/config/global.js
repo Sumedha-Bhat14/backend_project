@@ -11,6 +11,10 @@ ALREADY_EXISTS:{
     code:201,
     message:"already exsits",
 },
+NOT_FOUND:{
+    code:205,
+    message:"notfound",
+},
 SUCCESS:{
     code:200,
     message:"everything is ok",

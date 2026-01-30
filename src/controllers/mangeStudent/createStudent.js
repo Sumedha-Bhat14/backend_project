@@ -74,6 +74,7 @@ export default router.post("/", async (req,res)=>{
             message:"Student created succesfully"
         })
 
+        
     } catch(error){
         console.log("create student",error);
         // return res.send({
