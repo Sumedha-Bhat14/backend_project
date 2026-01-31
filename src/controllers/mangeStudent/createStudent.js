@@ -17,7 +17,7 @@ export default router.post("/", async (req,res)=>{
             //     message: "name is mandatory",
             // })
             return send(res,setErrMsg("Name",RESPONSE.REQUIRED))
-        }
+        } 
 
         if(!email || email==undefined){
             // return res.send({ 
@@ -40,7 +40,7 @@ export default router.post("/", async (req,res)=>{
         // return res.send({
         //     code:203,
         //     message:"email is invalid"
-        // })
+        // }) 
         return send(res,setErrMsg("Email",RESPONSE.INVALID));
     }
 
@@ -49,7 +49,7 @@ export default router.post("/", async (req,res)=>{
         // return res.send({
         //     code:202,
         //     message:"Rollno already exists", 
-        // });
+        // }); 
         return send(res,setErrMsg("Rollno",RESPONSE.ALREADY_EXISTS));
     }
 
