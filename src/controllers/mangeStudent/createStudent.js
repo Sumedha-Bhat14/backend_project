@@ -1,10 +1,11 @@
 import { Router} from "express";
+const router=Router();
 import studentModel from "../../models/studentModel.js";
 import {send, setErrMsg} from "../../helper/responseHelper.js";
 import {RESPONSE} from "../../config/global.js";
-const router=Router();
+import { authenticate } from "../../middlewares/authencate.js";
 
-export default router.post("/", async (req,res)=>{
+export default router.post("/", authenticate, async (req,res)=>{
     try{
         const{ name,rollno,email }=req.body || {};
        
@@ -60,4 +61,5 @@ export default router.post("/", async (req,res)=>{
         return send(res,RESPONSE.UNKNOWN_ERR);
     }
 }); 
+
 

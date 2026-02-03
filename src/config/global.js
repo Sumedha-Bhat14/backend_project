@@ -1,3 +1,5 @@
+import e from "express";
+
 export const RESPONSE={
     REQUIRED:{
         code:201,
@@ -14,6 +16,10 @@ ALREADY_EXISTS:{
 NOT_FOUND:{
     code:205,
     message:"notfound",
+},
+ACCESS_DENIED:{
+    code:400,
+    message:"Access denied", 
 },
 SUCCESS:{
     code:200,
