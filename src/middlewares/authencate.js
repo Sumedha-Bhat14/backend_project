@@ -1,6 +1,6 @@
 import { RESPONSE } from "../config/global.js";
 import { send, setErrMsg } from "../helper/responseHelper.js";
-
+import jwt from "jsonwebtoken";
 
 export const authenticate=async(req,res,next)=>{
     try{

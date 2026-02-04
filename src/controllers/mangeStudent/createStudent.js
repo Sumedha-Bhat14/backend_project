@@ -43,21 +43,16 @@ export default router.post("/", authenticate, async (req,res)=>{
     }
     
          await studentModel.create({
-        name:name,
-        rollno:rollno,
-         email:email,
+        name,
+        rollno,
+         email,
+         teacher_id:req.user.id, //Accesssing teacher id from token
         });  
 
 
-        return res.send({
-            code:200,
-            message:"Student created succesfully"
-        })
-
-        
+        return send(res,RESPONSE.SUCCESS);
     } catch(error){
         console.log("create student",error);
-      
         return send(res,RESPONSE.UNKNOWN_ERR);
     }
 }); 

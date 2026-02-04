@@ -17,6 +17,10 @@ NOT_FOUND:{
     code:205,
     message:"notfound",
 },
+MULTER_ERR:{
+    code:206,
+    message:"",
+},
 ACCESS_DENIED:{
     code:400,
     message:"Access denied", 
